@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { ArticlesListComponent } from '../components/articles-list/articles-list';
 
 @Component({
   selector: 'app-layout',
-  standalone: true,
-  imports: [],
   templateUrl: './layout.html',
-  styleUrl: './layout.css'
+  styleUrl: './layout.css',
+  imports: [ArticlesListComponent]
 })
 export class LayoutComponent {
-  title = 'WebDev Portal';  // Назва вашого додатку
+  title = 'WebDev Portal';
 }

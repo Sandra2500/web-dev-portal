@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Article } from '../../shared/models/article.model';
 
 @Component({
   selector: 'app-article-card',
-  imports: [],
   templateUrl: './article-card.html',
-  styleUrl: './article-card.css'
+  styleUrl: './article-card.css',
+  imports: [CommonModule]
 })
-export class ArticleCard {
-
+export class ArticleCardComponent {
+  @Input() article!: Article;
 }
