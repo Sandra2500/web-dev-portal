@@ -1,0 +1,15 @@
+
+<div class="article-card">
+  <div class="article-content">
+    <h3>{{ article.title }}</h3>
+    <p class="description">{{ article.description }}</p>
+    <div class="article-meta">
+      <span class="author">{{ article.author }}</span>
+      <span class="date">{{ article.publishDate | date:'dd.MM.yyyy' }}</span>
+      <span class="read-time">{{ article.readTime }} хв</span>
+    </div>
+    <div class="tags">
+      <span *ngFor="let tag of article.tags" class="tag">{{ tag }}</span>
+    </div>
+  </div>
+</div>

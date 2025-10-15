@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { Layout } from './components/layout/layout'; // Використовуємо components/layout
+import { LayoutComponent } from './components/layout/layout.component';
 
 export const routes: Routes = [
-  { path: '', component: Layout },
+  { path: '', component: LayoutComponent }
 ];
