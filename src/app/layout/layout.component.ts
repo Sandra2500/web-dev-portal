@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { ArticlesListComponent } from '../components/articles-list/articles-list';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './layout.html',
-  styleUrl: './layout.css',
-  imports: [ArticlesListComponent]
+  styleUrl: './layout.css'
 })
 export class LayoutComponent {
   title = 'WebDev Portal';

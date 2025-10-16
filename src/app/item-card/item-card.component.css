@@ -1,0 +1,90 @@
+.item-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.item-card.featured {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%);
+}
+
+.item-card.out-of-stock {
+  opacity: 0.7;
+}
+
+.badges {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.featured-badge {
+  background-color: #007bff;
+  color: white;
+}
+
+.stock-badge {
+  background-color: #dc3545;
+  color: white;
+}
+
+.free-badge {
+  background-color: #28a745;
+  color: white;
+}
+
+.item-card h3 {
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.description {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #28a745;
+  font-size: 1.125rem;
+}
+
+.price.free {
+  color: #28a745;
+}

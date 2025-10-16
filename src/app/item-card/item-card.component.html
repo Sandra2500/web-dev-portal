@@ -1,0 +1,25 @@
+<div class="item-card" 
+     [ngClass]="{
+       'featured': item.isFeatured,
+       'out-of-stock': !item.inStock
+     }"
+     [ngStyle]="{
+       'border-left': item.isFeatured ? '4px solid #007bff' : '4px solid transparent'
+     }">
+  
+  <div class="badges">
+    <span *ngIf="item.isFeatured" class="badge featured-badge">Featured</span>
+    <span *ngIf="!item.inStock" class="badge stock-badge">Out of Stock</span>
+    <span *ngIf="item.price === 0" class="badge free-badge">Free</span>
+  </div>
+
+  <h3>{{ item.name }}</h3>
+  <p class="description">{{ item.description }}</p>
+  
+  <div class="details">
+    <span class="category">{{ item.category }}</span>
+    <span class="price" [ngClass]="{'free': item.price === 0}">
+      {{ item.price === 0 ? 'Free' : '$' + item.price }}
+    </span>
+  </div>
+</div>

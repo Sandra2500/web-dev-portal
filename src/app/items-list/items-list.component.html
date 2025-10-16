@@ -1,0 +1,19 @@
+<div class="items-container">
+  <h2>Web Development Courses</h2>
+  
+  <div class="items-grid">
+    <app-item-card 
+      *ngFor="let item of items" 
+      [item]="item">
+    </app-item-card>
+  </div>
+
+  <div *ngIf="items.length === 0" class="no-items">
+    <p>No items available at the moment.</p>
+  </div>
+
+  <div class="stats" *ngIf="items.length > 0">
+    <p>Total items: {{ items.length }}</p>
+    <p>Featured items: {{ getFeaturedCount() }}</p>
+  </div>
+</div>
