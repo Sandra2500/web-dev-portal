@@ -8,6 +8,4 @@ import { RouterModule } from '@angular/router';
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })
-export class LayoutComponent {
-  appTitle = 'WebDev Portal';
-}
+export class LayoutComponent {}
