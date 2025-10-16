@@ -1,0 +1,7 @@
+[33m3531f2e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mpr-01-project-setup[m[33m, [m[1;31morigin/pr-02-components-and-models[m[33m, [m[1;32mpr-02-components-and-models[m[33m)[m Rename components to standard Angular naming convention
+[33m7efd23a[m[33m ([m[1;31morigin/pr-03-data-binding[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Merge pr-01-project-setup: resolve layout.html conflict
+[33m796758c[m Add CSS styling for header and footer with proper classes
+[33m9fce97d[m feat: complete practical work #2 - components and models
+[33mf0254ca[m feat: add components for articles, projects and tutorials
+[33m5d15d7d[m feat: complete practical work #1 - project setup and layout component
+[33mc21ec6d[m Initial commit
