@@ -1,0 +1,25 @@
+<div class="items-container">
+  <h2>Web Development Courses</h2>
+  
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterItems()"
+      placeholder="Search courses by name, description or category..."
+      class="search-input"
+    >
+  </div>
+
+  <div class="items-grid">
+    <app-item-card 
+      *ngFor="let item of filteredItems" 
+      [item]="item"
+      (itemSelected)="onItemSelected($event)">
+    </app-item-card>
+  </div>
+
+  <div *ngIf="filteredItems.length === 0" class="no-items">
+    <p>No courses found.</p>
+  </div>
+</div>
