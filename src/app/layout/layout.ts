@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { ArticlesListComponent } from '../components/articles-list/articles-list';
 
 @Component({
   selector: 'app-layout',
+  imports: [],
   templateUrl: './layout.html',
-  styleUrl: './layout.css',
-  imports: [ArticlesListComponent]
+  styleUrl: './layout.css'
 })
-export class LayoutComponent {
-  title = 'WebDev Portal';
+export class Layout {
+
 }
