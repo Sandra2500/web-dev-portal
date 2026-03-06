@@ -4,7 +4,7 @@ export interface Tutorial {
   description: string;
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   duration: number; // в хвилинах
-  steps: string[];
-  prerequisites: string[];
-  category: string;
+  author: string;
+  publishDate: Date;
+  tags: string[];
 }

@@ -1,1 +1,26 @@
-<p>project-card works!</p>
+<div class="project-card" [appHighlight]="'rgba(46, 204, 113, 0.3)'">
+  <h3>{{ project.title }}</h3>
+  
+  <p class="description">{{ project.description | truncate:100 }}</p>
+  
+  <div class="status-badge" 
+       [style.backgroundColor]="project.status | statusColor">
+    {{ project.status }}
+  </div>
+  
+  <div class="technologies">
+    <span *ngFor="let tech of project.technologies" class="tech-tag">
+      {{ tech }}
+    </span>
+  </div>
+  
+  <div class="dates">
+    <span>Початок: {{ project.startDate | date:'dd.MM.yyyy' }}</span>
+    <span *ngIf="project.endDate">Завершення: {{ project.endDate | date:'dd.MM.yyyy' }}</span>
+  </div>
+  
+  <div class="links">
+    <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank">GitHub</a>
+    <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank">Demo</a>
+  </div>
+</div>

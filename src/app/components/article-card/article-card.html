@@ -1,11 +1,21 @@
-<div class="article-card">
+<div class="article-card" [appHighlight]="'rgba(52, 152, 219, 0.3)'">
   <h3>{{ article.title }}</h3>
-  <p class="description">{{ article.description }}</p>
+  
+  <!-- Додаємо пайп truncate до опису -->
+  <p class="description">{{ article.description | truncate:120 }}</p>
+  
+  <!-- Використовуємо category замість status для демонстрації кольорів -->
+  <div class="category-badge" 
+       [style.backgroundColor]="article.category | statusColor">
+    {{ article.category }}
+  </div>
+  
   <div class="meta">
     <span class="author">Автор: {{ article.author }}</span>
     <span class="date">{{ article.publishDate | date:'dd.MM.yyyy' }}</span>
     <span class="read-time">{{ article.readTime }} хв</span>
   </div>
+  
   <div class="tags">
     <span *ngFor="let tag of article.tags" class="tag">{{ tag }}</span>
   </div>

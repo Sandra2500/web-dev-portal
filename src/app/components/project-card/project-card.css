@@ -1,0 +1,65 @@
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: capitalize;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.tech-tag {
+  background-color: #e1f5fe;
+  color: #0288d1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.dates {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.links a {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.description {
+  color: #444;
+  line-height: 1.5;
+  margin: 10px 0;
+}
