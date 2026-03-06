@@ -1,8 +1,15 @@
-<div class="articles-list">
-  <h2>Статті про веб-розробку</h2>
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Статті про веб-розробку</h1>
+    <a routerLink="/article/new" class="btn btn-primary">
+      + Додати статтю
+    </a>
+  </div>
+  
   <div class="articles-grid">
+    <!-- ваші картки статей -->
     <app-article-card 
-      *ngFor="let article of articles" 
+      *ngFor="let article of articles$ | async" 
       [article]="article">
     </app-article-card>
   </div>

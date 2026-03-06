@@ -1,0 +1,177 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Додати нову статтю</h2>
+        <a routerLink="/articles" class="btn btn-secondary">Назад до списку</a>
+      </div>
+      
+      <form [formGroup]="articleForm" (ngSubmit)="onSubmit()" class="article-form">
+        
+        <!-- Поле Назва -->
+<div class="form-group mb-3">
+  <label for="title" class="form-label">Назва статті *</label>
+  <input 
+    type="text" 
+    id="title" 
+    class="form-control" 
+    formControlName="title"
+    [class.is-invalid]="title?.invalid && title?.touched">
+  
+  @if (title?.invalid && title?.touched) {
+    <div class="invalid-feedback">
+      @if (title?.errors?.['required']) {
+        <span>Назва обов'язкова</span>
+      }
+      @if (title?.errors?.['minlength']) {
+        <span>Мінімальна довжина 3 символи</span>
+      }
+      @if (title?.errors?.['forbiddenWords']) {
+        <span>Назва містить заборонене слово: "{{ title?.errors?.['forbiddenWords'].word }}"</span>
+      }
+    </div>
+  }
+</div>
+        
+        <!-- Поле Опис -->
+        <div class="form-group mb-3">
+          <label for="description" class="form-label">Короткий опис *</label>
+          <textarea 
+            id="description" 
+            class="form-control" 
+            formControlName="description"
+            rows="3"
+            [class.is-invalid]="description?.invalid && description?.touched"></textarea>
+          
+          @if (description?.invalid && description?.touched) {
+            <div class="invalid-feedback">
+              @if (description?.errors?.['required']) {
+                <span>Опис обов'язковий</span>
+              }
+              @if (description?.errors?.['minlength']) {
+                <span>Мінімальна довжина 10 символів</span>
+              }
+            </div>
+          }
+        </div>
+        
+        <!-- Поле Контент -->
+        <div class="form-group mb-3">
+          <label for="content" class="form-label">Повний текст *</label>
+          <textarea 
+            id="content" 
+            class="form-control" 
+            formControlName="content"
+            rows="6"
+            [class.is-invalid]="content?.invalid && content?.touched"></textarea>
+          
+          @if (content?.invalid && content?.touched) {
+            <div class="invalid-feedback">
+              @if (content?.errors?.['required']) {
+                <span>Текст статті обов'язковий</span>
+              }
+              @if (content?.errors?.['minlength']) {
+                <span>Мінімальна довжина 50 символів</span>
+              }
+            </div>
+          }
+        </div>
+        
+        <!-- Поле Автор -->
+        <div class="form-group mb-3">
+          <label for="author" class="form-label">Автор *</label>
+          <input 
+            type="text" 
+            id="author" 
+            class="form-control" 
+            formControlName="author"
+            [class.is-invalid]="author?.invalid && author?.touched">
+          
+          @if (author?.invalid && author?.touched) {
+            <div class="invalid-feedback">
+              @if (author?.errors?.['required']) {
+                <span>Автор обов'язковий</span>
+              }
+            </div>
+          }
+        </div>
+        
+        <div class="row">
+          <!-- Поле Категорія (select) -->
+          <div class="col-md-6 mb-3">
+            <label for="category" class="form-label">Категорія *</label>
+            <select 
+              id="category" 
+              class="form-control" 
+              formControlName="category"
+              [class.is-invalid]="category?.invalid && category?.touched">
+              <option value="">Оберіть категорію</option>
+              @for (cat of categories; track cat) {
+                <option [value]="cat">{{ cat }}</option>
+              }
+            </select>
+            
+            @if (category?.invalid && category?.touched) {
+              <div class="invalid-feedback">
+                @if (category?.errors?.['required']) {
+                  <span>Оберіть категорію</span>
+                }
+              </div>
+            }
+          </div>
+          
+          <!-- Поле Час читання -->
+          <div class="col-md-6 mb-3">
+            <label for="readTime" class="form-label">Час читання (хвилин) *</label>
+            <input 
+              type="number" 
+              id="readTime" 
+              class="form-control" 
+              formControlName="readTime"
+              [class.is-invalid]="readTime?.invalid && readTime?.touched">
+            
+            @if (readTime?.invalid && readTime?.touched) {
+              <div class="invalid-feedback">
+                @if (readTime?.errors?.['required']) {
+                  <span>Час читання обов'язковий</span>
+                }
+                @if (readTime?.errors?.['min']) {
+                  <span>Мінімум 1 хвилина</span>
+                }
+                @if (readTime?.errors?.['max']) {
+                  <span>Максимум 60 хвилин</span>
+                }
+              </div>
+            }
+          </div>
+        </div>
+        
+        <!-- Кнопки -->
+        <div class="d-flex gap-2 mt-4">
+          <button 
+            type="submit" 
+            class="btn btn-primary" 
+            [disabled]="articleForm.invalid">
+            Зберегти статтю
+          </button>
+          <button 
+            type="button" 
+            class="btn btn-outline-secondary" 
+            routerLink="/articles">
+            Скасувати
+          </button>
+        </div>
+        
+        <!-- Індикатор валідності форми -->
+        <div class="mt-3">
+          <small class="text-muted">
+            Стан форми: 
+            <span [class.text-success]="articleForm.valid" [class.text-danger]="articleForm.invalid">
+              {{ articleForm.valid ? 'Валідна' : 'Невалідна' }}
+            </span>
+          </small>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
