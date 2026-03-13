@@ -1,8 +1,8 @@
 <div class="articles-list">
   <h2>Статті про веб-розробку</h2>
   <div class="articles-grid">
-    <app-article-card 
-      *ngFor="let article of articles" 
+    <app-article-card
+      *ngFor="let article of articles$ | async"
       [article]="article">
     </app-article-card>
   </div>

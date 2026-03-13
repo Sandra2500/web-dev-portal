@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Основи Angular для початківців",
+      "description": "Повний гайд по створенню першого додатку на Angular",
+      "content": "Angular - це потужний фреймворк для створення клієнтських додатків...",
+      "author": "WebDev Student",
+      "publishDate": "2025-01-15T00:00:00.000Z",
+      "category": "Frontend",
+      "readTime": 10,
+      "tags": ["Angular", "TypeScript", "Початківцям"]
+    },
+    {
+      "id": 2,
+      "title": "Створення адаптивного дизайну",
+      "description": "Як зробити сайт, який добре виглядає на всіх пристроях",
+      "content": "Адаптивний дизайн - це підхід до веб-дизайну...",
+      "author": "WebDev Student",
+      "publishDate": "2025-01-20T00:00:00.000Z",
+      "category": "CSS",
+      "readTime": 8,
+      "tags": ["CSS", "Responsive", "Design"]
+    }
+  ]
+}
