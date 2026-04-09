@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { Layout } from './components/layout/layout'; // Використовуємо components/layout
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 export const routes: Routes = [
-  { path: '', component: Layout },
+  { path: '', component: ProductListComponent },
+  { path: '**', redirectTo: '' }
 ];

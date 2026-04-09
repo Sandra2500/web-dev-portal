@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://expert-computing-machine-7v5rxj6gpxg7fwpjv-3000.app.github.dev",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
