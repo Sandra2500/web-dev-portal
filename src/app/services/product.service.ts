@@ -24,7 +24,7 @@ export class ProductService {
   }
 
   loadInitialData(): void {
-    this.http.get<Item[]>('items')
+    this.http.get<Item[]>('/api/items')
       .pipe(
         catchError((error) => {
           console.error('Error loading data:', error);
@@ -33,14 +33,15 @@ export class ProductService {
       )
       .subscribe({
         next: (data) => {
+          console.log('Data loaded:', data);
           this.itemsSubject$.next(data);
         },
-        error: (error) => console.error('Error loading data:', error)
+        error: (error) => console.error('Error:', error)
       });
   }
 
   addItem(item: Omit<Item, 'id'>): void {
-    this.http.post<Item>('items', item)
+    this.http.post<Item>('/api/items', item)
       .pipe(
         tap((newItem) => {
           const currentItems = this.itemsSubject$.getValue();
@@ -55,7 +56,7 @@ export class ProductService {
   }
 
   deleteItem(id: string): void {
-    this.http.delete(`items/${id}`)
+    this.http.delete(`/api/items/${id}`)
       .pipe(
         tap(() => {
           const currentItems = this.itemsSubject$.getValue();
