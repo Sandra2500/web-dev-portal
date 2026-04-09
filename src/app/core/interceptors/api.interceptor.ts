@@ -1,11 +1,14 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
-const API_BASE_URL = 'http://localhost:3000/';
-
 export const apiInterceptor: HttpInterceptorFn = (req, next) => {
+  if (req.url.startsWith('http')) {
+    return next(req);
+  }
+  
   const apiReq = req.clone({
-    url: `${API_BASE_URL}${req.url}`
+    url: `/api/${req.url}`
   });
-
+  
+  console.log('Request via proxy:', apiReq.url);
   return next(apiReq);
 };

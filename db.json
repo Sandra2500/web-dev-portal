@@ -1,26 +1,54 @@
 {
-  "items": [
+  "users": [
     {
-      "id": 1,
-      "title": "Основи Angular для початківців",
-      "description": "Повний гайд по створенню першого додатку на Angular",
-      "content": "Angular - це потужний фреймворк для створення клієнтських додатків...",
-      "author": "WebDev Student",
-      "publishDate": "2025-01-15T00:00:00.000Z",
-      "category": "Frontend",
-      "readTime": 10,
-      "tags": ["Angular", "TypeScript", "Початківцям"]
+      "id": "1",
+      "email": "test@example.com",
+      "password": "$2a$10$rVgHqYgL.ZqE8XfZ.qE8Xe",
+      "name": "Test User"
     },
     {
-      "id": 2,
-      "title": "Створення адаптивного дизайну",
-      "description": "Як зробити сайт, який добре виглядає на всіх пристроях",
-      "content": "Адаптивний дизайн - це підхід до веб-дизайну...",
-      "author": "WebDev Student",
-      "publishDate": "2025-01-20T00:00:00.000Z",
-      "category": "CSS",
-      "readTime": 8,
-      "tags": ["CSS", "Responsive", "Design"]
+      "id": "1775747059357",
+      "email": "user@test.com",
+      "password": "$2b$10$oz2/SPqYlEa0MZI6K5BPue.xivxA0r/tj/.zyK7mVUenxBB0BuH0u",
+      "name": "Test User"
+    },
+    {
+      "id": "1775754504393",
+      "email": "newuser@example.com",
+      "password": "$2b$10$uGtpKS7odH/abgXi33ssK.HwLfPVO8NguNFGzLzjMjZM9YcARKCJO",
+      "name": "New User"
+    },
+    {
+      "id": "1775754820719",
+      "email": "maria@example.com",
+      "password": "$2b$10$EzDJaBvB6TgDtnZailqXE.vHF7qfBSoRnkujr5XWt3LG9P0Mb7x/2",
+      "name": "Марія Петренко"
+    },
+    {
+      "id": "1775754901092",
+      "email": "vovsasha51@gmail.com",
+      "password": "$2b$10$/NlzyNDfm0V7nZblgGc6G.2Fq3.YMl5wiyGIv.TSjqH6fOQcrcNTa",
+      "name": "Олександра Вакуленко"
+    }
+  ],
+  "items": [
+    {
+      "id": "1",
+      "title": "Ноутбук Lenovo IdeaPad",
+      "category": "Техніка",
+      "price": 25999
+    },
+    {
+      "id": "2",
+      "title": "Бездротова миша Logitech",
+      "category": "Аксесуари",
+      "price": 1299
+    },
+    {
+      "id": "3",
+      "title": "Механічна клавіатура",
+      "category": "Периферія",
+      "price": 3499
     }
   ]
 }
